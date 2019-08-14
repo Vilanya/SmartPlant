@@ -25,10 +25,13 @@ void loop() {
   if (val < 300)
   {
     digitalWrite(led, HIGH);
+    Serial.print("On ");
   }
   else
   { 
     digitalWrite(led, LOW);
+    Serial.print("Off ");
   }
   delay(500);
+  
 }
