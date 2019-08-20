@@ -20,18 +20,20 @@ void loop() {
   int val;
   
   val = analogRead(0); //connect sensor to Analog 0
-  Serial.println(val); //print the value to serial port
+  //Serial.println(val); //print the value to serial port
   
-  if (val < 300)
+  if (val < 450)
   {
     digitalWrite(led, HIGH);
-    Serial.print("On ");
+    Serial.print(" LED On ");
+    Serial.println(val);
   }
   else
   { 
     digitalWrite(led, LOW);
-    Serial.print("Off ");
+    Serial.print("LED Off ");
+    Serial.println(val);
   }
-  delay(500);
+  delay(1800000);
   
 }
